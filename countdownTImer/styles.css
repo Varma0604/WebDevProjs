@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.timer-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.time-display {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls input {
+  width: 60px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #0056b3;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #218838;
+}
+
+.buttons button:nth-child(2) {
+  background: #ffc107;
+}
+
+.buttons button:nth-child(2):hover {
+  background: #e0a800;
+}
+
+.buttons button:nth-child(3) {
+  background: #dc3545;
+}
+
+.buttons button:nth-child(3):hover {
+  background: #c82333;
+}

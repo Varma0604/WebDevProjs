@@ -1,0 +1,92 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-app {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+.weather-app h1 {
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2980b9;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #3498db;
+}
+
+.unit-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.unit-options input[type="radio"] {
+  display: none;
+}
+
+.unit-options label {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.unit-options input[type="radio"]:checked + label {
+  background-color: #2980b9;
+}
+
+.weather-info {
+  display: none;
+}
+
+.weather-info h2 {
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  margin: 5px 0;
+}
+
+.weather-info img {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Countdown Timer</h1>
+        <div class="time-display" id="time-display">00:00:00</div>
+        <div class="controls">
+            <input type="number" id="hours" placeholder="Hours" min="0">
+            <input type="number" id="minutes" placeholder="Minutes" min="0">
+            <input type="number" id="seconds" placeholder="Seconds" min="0">
+            <button onclick="setTimer()">Set Timer</button>
+        </div>
+        <div class="buttons">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+
+    <audio id="start-sound" src="sounds/start.mp3"></audio>
+    <audio id="pause-sound" src="sounds/pause.mp3"></audio>
+    <audio id="resume-sound" src="sounds/resume.mp3"></audio>
+    <audio id="end-sound" src="alarm-clock-short-6402.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

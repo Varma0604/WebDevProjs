@@ -1,0 +1,117 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.app-title {
+  color: #4CAF50;
+  margin-bottom: 30px;
+}
+
+.todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  padding: 10px;
+  width: 60%;
+  border: 2px solid #4CAF50;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.todo-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-button:hover {
+  background-color: #45a049;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.todo-item.completed {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.todo-item.deleted {
+  transform: translateY(-100px);
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events during animation */
+}
+
+.todo-item-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.delete-btn, .complete-btn, .nothing-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dd3333;
+}
+
+.complete-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 10px;
+}
+
+.complete-btn:hover {
+  background-color: #45a049;
+}
+
+
