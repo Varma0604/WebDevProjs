@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procrastination Buster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procrastination Buster</h1>
+        <div class="grid-container">
+            <div class="grid-item" onclick="showDetails('goal')">
+                <h2>Set Clear Goals</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('schedule')">
+                <h2>Create a Schedule</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('group')">
+                <h2>Study Group</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('distractions')">
+                <h2>Minimize Distractions</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('rewards')">
+                <h2>Use Rewards</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('resources')">
+                <h2>Online Resources</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('positivity')">
+                <h2>Stay Positive</h2>
+            </div>
+            <div class="grid-item" onclick="showDetails('mentorship')">
+                <h2>Seek Mentorship</h2>
+            </div>
+        </div>
+        <div id="details" class="details">
+            <h3 id="detail-title"></h3>
+            <p id="detail-content"></p>
+            <div id="interactive-content"></div>
+            <button onclick="closeDetails()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
