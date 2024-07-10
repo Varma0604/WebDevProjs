@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="preview-images">
+            <div class="preview-image active" onclick="currentSlide(1)">
+                <img src="images/pexels-fabianwiktor-994605.jpg" alt="Photo 1">
+            </div>
+            <div class="preview-image" onclick="currentSlide(2)">
+                <img src="images/pexels-pixabay-206359.jpg" alt="Photo 2">
+            </div>
+            <div class="preview-image" onclick="currentSlide(2)">
+              <img src="images/pexels-pripicart-620337.jpg" alt="Photo 3">
+            </div>
+            <div class="preview-image" onclick="currentSlide(2)">
+              <img src="images/pexels-souvenirpixels-417074.jpg" alt="Photo 4">
+            </div>
+            
+        </div>
+
+        <div class="main-image">
+            <img class="main-slide" src="images/pexels-fabianwiktor-994605.jpg" alt="Main Image">
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
