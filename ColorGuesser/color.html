@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Name Guesser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Color Name Guesser</h1>
+        <p>Try to guess the name of the color shown below:</p>
+        <div id="colorBox"></div>
+        <div id="options"></div>
+        <p id="result"></p>
+        <button id="newGame">New Game</button>
+    </div>
+
+    <script>
+        const colors = [
+            {name: "Red", hex: "#FF0000"},
+            {name: "Green", hex: "#00FF00"},
+            {name: "Blue", hex: "#0000FF"},
+            {name: "Yellow", hex: "#FFFF00"},
+            {name: "Purple", hex: "#800080"},
+            {name: "Orange", hex: "#FFA500"},
+            {name: "Pink", hex: "#FFC0CB"},
+            {name: "Brown", hex: "#A52A2A"},
+            {name: "Gray", hex: "#808080"},
+            {name: "Black", hex: "#000000"}
+        ];
+
+        let currentColor;
+
+        function startNewGame() {
+            currentColor = colors[Math.floor(Math.random() * colors.length)];
+            const colorBox = document.getElementById('colorBox');
+            colorBox.style.backgroundColor = currentColor.hex;
+
+            const options = [currentColor.name];
+            while (options.length < 3) {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)].name;
+                if (!options.includes(randomColor)) {
+                    options.push(randomColor);
+                }
+            }
+            options.sort(() => Math.random() - 0.5);
+
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+            options.forEach(colorName => {
+                const button = document.createElement('button');
+                button.textContent = colorName;
+                button.addEventListener('click', () => checkGuess(colorName));
+                optionsContainer.appendChild(button);
+            });
+
+            document.getElementById('result').textContent = '';
+        }
+
+        function checkGuess(guessedColorName) {
+            const resultElement = document.getElementById('result');
+            if (guessedColorName === currentColor.name) {
+                resultElement.textContent = 'Correct! You guessed the right color name!';
+            } else {
+                resultElement.textContent = `Wrong guess. The correct color name was ${currentColor.name}.`;
+            }
+        }
+
+        document.getElementById('newGame').addEventListener('click', startNewGame);
+
+        // Start the first game
+        startNewGame();
+    </script>
+</body>
+</html>
